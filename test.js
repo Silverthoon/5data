@@ -1,4 +1,5 @@
 const faker = require("faker");
+const fs = require("fs");
 faker.locale = "fr";
 
 function randomIntFromInterval(min, max) {
@@ -52,7 +53,7 @@ function generate_identity(max) {
     actualProm, //0 if dropped , 1-5 if still at school, 6 if graduated
     graduationYear,
     abandon = 0,
-    dropRate = max * (randomIntFromInterval(2, 5) / 10),
+    dropRate = max * (randomIntFromInterval(1, 4) / 10),
     dropped,
     droppedProm,
     graduated,
@@ -61,6 +62,7 @@ function generate_identity(max) {
     i = 0;
   console.log(dropRate);
   while (i < max) {
+    console.log(i);
     // if zero in bracket, gonna provide male name faker.name.some_methode()
     firstName = faker.name.firstName(0);
     lastName = faker.name.lastName();
@@ -95,6 +97,7 @@ function generate_identity(max) {
     if (emails.includes(email) == false && numbers.includes(number) == false) {
       emails.push(email);
       person.push({
+        id: i,
         firstName: firstName,
         lastName: lastName,
         email: email,
@@ -117,7 +120,15 @@ function generate_identity(max) {
   return person;
 }
 
-let data = generate_identity(10);
-console.log(data);
+let data = generate_identity(100);
+//console.log(data);
 
-console.log("end");
+fs.writeFile("./data.json", data, (err) => {
+  if (err) throw err;
+});
+
+console.dir(data, { maxArrayLength: null });
+
+//console.log(generate_identity(process.argv[2]), { maxArrayLength: null });
+//console.log("end");
+//console.log(generate_identity(process.argv[2]), { maxArrayLength: null });
