@@ -1,4 +1,0 @@
-# Notes
-
-ssssssssss sssssssssssssssssssss ssssssssssssssssss ssssssssssss
-ssssssssssssssssssssssssssssssss
