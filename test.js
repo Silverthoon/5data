@@ -120,10 +120,10 @@ function generate_identity(max) {
   return person;
 }
 
-let data = generate_identity(100);
+let data = JSON.stringify(generate_identity(100000));
 //console.log(data);
 
-fs.writeFile("./data.json", data, (err) => {
+fs.writeFile("./data.json", data, "utf8", (err) => {
   if (err) throw err;
 });
 
