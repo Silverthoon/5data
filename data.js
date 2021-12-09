@@ -130,7 +130,7 @@ function generate_identity(max, gender) {
         : randomIntFromInterval(60, 70) * (actualProm - 1) +
           randomIntFromInterval(0, 60);
 
-    hired = graduated && randomIntFromInterval(0, 1, 2) != 0;
+    hired = dropped || !graduated ? null : randomIntFromInterval(0, 1, 2) != 0;
     field = hired ? fields[Math.floor(Math.random() * fields.length)] : null;
     monthsBfrJob = hired ? randomIntFromInterval(0, 24) : null;
 
@@ -201,7 +201,6 @@ fs.writeFile("./students.json", data, "utf8", (err) => {
 /*
 //uncomment the following lines to generate campus dict
 
-
 //create campus records
 function generate_campus() {
   let towns = [
@@ -227,7 +226,7 @@ function generate_campus() {
   for (let i = 0; i < towns.length; i++) {
     campus.push({
       id: i + 1,
-      title: towns[i],
+      title: "Supinfo " + towns[i],
       facilities: randomIntFromInterval(5, 10),
     });
   }

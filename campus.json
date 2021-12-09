@@ -1,82 +1,82 @@
 [
   {
     "id": 1,
-    "title": "Dakar",
-    "facilities": 5
+    "title": "Supinfo Dakar",
+    "facilities": 8
   },
   {
     "id": 2,
-    "title": "Casablanca",
-    "facilities": 9
+    "title": "Supinfo Casablanca",
+    "facilities": 6
   },
   {
     "id": 3,
-    "title": "Tours",
-    "facilities": 9
+    "title": "Supinfo Tours",
+    "facilities": 7
   },
   {
     "id": 4,
-    "title": "Lille",
+    "title": "Supinfo Lille",
     "facilities": 9
   },
   {
     "id": 5,
-    "title": "Nantes",
-    "facilities": 8
+    "title": "Supinfo Nantes",
+    "facilities": 9
   },
   {
     "id": 6,
-    "title": "Angers",
-    "facilities": 8
+    "title": "Supinfo Angers",
+    "facilities": 5
   },
   {
     "id": 7,
-    "title": "Paris",
-    "facilities": 10
-  },
-  {
-    "id": 8,
-    "title": "Marseille",
-    "facilities": 10
-  },
-  {
-    "id": 9,
-    "title": "Bruxelles",
-    "facilities": 6
-  },
-  {
-    "id": 10,
-    "title": "Londres",
+    "title": "Supinfo Paris",
     "facilities": 7
   },
   {
-    "id": 11,
-    "title": "Caen",
+    "id": 8,
+    "title": "Supinfo Marseille",
+    "facilities": 9
+  },
+  {
+    "id": 9,
+    "title": "Supinfo Bruxelles",
+    "facilities": 5
+  },
+  {
+    "id": 10,
+    "title": "Supinfo Londres",
     "facilities": 10
   },
   {
-    "id": 12,
-    "title": "Metz",
+    "id": 11,
+    "title": "Supinfo Caen",
     "facilities": 8
   },
   {
+    "id": 12,
+    "title": "Supinfo Metz",
+    "facilities": 7
+  },
+  {
     "id": 13,
-    "title": "Clermont-Ferrand",
+    "title": "Supinfo Clermont-Ferrand",
     "facilities": 6
   },
   {
     "id": 14,
-    "title": "Rouen",
-    "facilities": 7
+    "title": "Supinfo Rouen",
+    "facilities": 6
   },
   {
     "id": 15,
-    "title": "Strasbourg",
-    "facilities": 7
+    "title": "Supinfo Strasbourg",
+    "facilities": 9
   },
   {
     "id": 16,
-    "title": "Lyon",
-    "facilities": 5
+    "title": "Supinfo Lyon",
+    "facilities": 8
   }
 ]
