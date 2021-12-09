@@ -128,8 +128,10 @@ function generate_identity(max, gender) {
       ? graduationYear - admissionYear
       : actualProm - arrivalProm;
     successfullness =
-      randomIntFromInterval(60, 70) * (actualProm - 1) +
-      randomIntFromInterval(0, 60);
+      dropped || graduated
+        ? null
+        : randomIntFromInterval(60, 70) * (actualProm - 1) +
+          randomIntFromInterval(0, 60);
 
     hired = graduated && randomIntFromInterval(0, 1, 2) != 0;
     field = hired ? fields[Math.floor(Math.random() * fields.length)] : null;
