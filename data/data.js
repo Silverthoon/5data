@@ -180,19 +180,13 @@ function generate_identity(max, gender) {
 }
 
 let quantity = process.argv[2]; // how many unique person do you want ?
-let male_students = JSON.stringify(
-  generate_identity(quantity * 0.8, 0),
-  undefined,
-  2 // pretty print
-);
-let female_students = JSON.stringify(
-  generate_identity(quantity * 0.2, 1),
-  undefined,
-  2 // pretty print
-);
+let male_students = generate_identity(quantity * 0.8, 0);
+let female_students = generate_identity(quantity * 0.2, 1);
 
 // concat males and females data
 let data = male_students.concat(female_students);
+
+data = JSON.stringify(data, undefined, 2);
 
 // write person' data into a json file
 fs.writeFile("./students.json", data, "utf8", (err) => {
