@@ -111,11 +111,8 @@ function generate_identity(max, gender) {
     graduationYear = 6 - arrivalProm + admissionYear;
     dropped = abandon < dropRate;
     graduated = !dropped && 2022 > graduationYear;
-    actualProm = dropped
-      ? null
-      : !graduated
-      ? arrivalProm + (actualYear - admissionYear)
-      : null;
+    actualProm =
+      dropped || graduated ? null : arrivalProm + (actualYear - admissionYear);
     droppedProm = dropped
       ? faker.datatype.number({
           min: arrivalProm,
