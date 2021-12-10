@@ -75,6 +75,7 @@ function generate_identity(max, gender) {
     monthsBfrJob,
     campus,
     actualYear = 2021,
+    internshipContract,
     person = [],
     i = 0;
 
@@ -125,12 +126,12 @@ function generate_identity(max, gender) {
       ? graduationYear - admissionYear
       : actualProm - arrivalProm;
     successfullness =
-      dropped || graduated
+      graduated
         ? null
         : randomIntFromInterval(60, 70) * (actualProm - 1) +
           randomIntFromInterval(0, 60);
-
-    hired = dropped || !graduated ? null : randomIntFromInterval(0, 1, 2) != 0;
+    internshipContract = actualProm >= 3 ? randomIntFromInterval(0, 1, 2) != 0 ? true : null;
+    hired = !graduated ? null : randomIntFromInterval(0, 1, 2) != 0;
     field = hired ? fields[Math.floor(Math.random() * fields.length)] : null;
     monthsBfrJob = hired ? randomIntFromInterval(0, 24) : null;
 
