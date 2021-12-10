@@ -1,0 +1,5 @@
+venv
+./app/samples/campus.json
+./app/samples/students.json
+
+./app/.ipynb_checkpoints

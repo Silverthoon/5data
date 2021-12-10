@@ -1,5 +1,14 @@
 version: "3.6"
 services:
+  jupyter:
+    image: jupyter/pyspark-notebook
+    ports:
+      - 8888:8888
+      - 4040:4040
+      - 4141:4141
+    environment:
+      JUPYTER_ENABLE_LAB: "yes"
+      JUPYTER_TOKEN: "docker"
   mongo:
     image: mongo
     restart: always
@@ -8,7 +17,7 @@ services:
       MONGO_INITDB_ROOT_PASSWORD: example
     volumes:
       - mongo_data:/data/db
-
+      - ./samples:/samples
   mongo-express:
       image: mongo-express
       restart: always
@@ -18,7 +27,6 @@ services:
         ME_CONFIG_MONGODB_ADMINUSERNAME: root
         ME_CONFIG_MONGODB_ADMINPASSWORD: example
         ME_CONFIG_MONGODB_URL: mongodb://root:example@mongo:27017/
-
   spark-master:
     image: andreper/spark-master:3.0.0
     container_name: spark-master
