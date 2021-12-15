@@ -75,7 +75,6 @@ function generate_identity(max, gender) {
     monthsBfrJob,
     campus,
     actualYear = 2021,
-    internshipContract,
     person = [],
     i = 0;
 
@@ -126,12 +125,12 @@ function generate_identity(max, gender) {
       ? graduationYear - admissionYear
       : actualProm - arrivalProm;
     successfullness =
-      graduated
+      dropped || graduated
         ? null
         : randomIntFromInterval(60, 70) * (actualProm - 1) +
           randomIntFromInterval(0, 60);
-    internshipContract = actualProm >= 3 ? randomIntFromInterval(0, 1, 2) != 0 ? true : null;
-    hired = !graduated ? null : randomIntFromInterval(0, 1, 2) != 0;
+
+    hired = dropped || !graduated ? null : randomIntFromInterval(0, 1, 2) != 0;
     field = hired ? fields[Math.floor(Math.random() * fields.length)] : null;
     monthsBfrJob = hired ? randomIntFromInterval(0, 24) : null;
 
@@ -195,7 +194,6 @@ fs.writeFile("./students.json", data, "utf8", (err) => {
 });
 /*
 //uncomment the following lines to generate campus dict
-
 //create campus records
 function generate_campus() {
   let towns = [
@@ -217,7 +215,6 @@ function generate_campus() {
       "Lyon",
     ],
     campus = [];
-
   for (let i = 0; i < towns.length; i++) {
     campus.push({
       id: i + 1,
@@ -227,12 +224,9 @@ function generate_campus() {
   }
   return campus;
 }
-
 campus = JSON.stringify(generate_campus(), undefined, 2);
-
 //write dict containing campus in a json file
 fs.writeFile("./campus.json", campus, "utf8", (err) => {
   if (err) throw err;
 });
-
 */
