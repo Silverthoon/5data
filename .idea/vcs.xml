@@ -3,6 +3,8 @@
   <component name="VcsDirectoryMappings">
     <mapping directory="$PROJECT_DIR$" vcs="Git" />
     <mapping directory="$PROJECT_DIR$/app/docker-spark-cluster" vcs="Git" />
+    <mapping directory="$PROJECT_DIR$/mongo" vcs="Git" />
+    <mapping directory="$PROJECT_DIR$/services/docker-spark-cluster" vcs="Git" />
     <mapping directory="$PROJECT_DIR$/spark-docker-swarm" vcs="Git" />
     <mapping directory="$PROJECT_DIR$/spark-standalone-cluster-on-docker" vcs="Git" />
   </component>
