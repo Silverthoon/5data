@@ -25,7 +25,7 @@ Tester la disponibilité de votre service en vous rendant sur http://localhost:8
 		
     Services Spark
 Afin de deployer les services spark , vous devez lancer le build de l'image suivi du deploiement des différents services.
-Rendez-vous dans le dossier **./services/docker-spark-cluster** et lancer les commandes suivantes au fur et à mesure:
+Rendez-vous dans le dossier **./services/spark-cluster** et lancer les commandes suivantes au fur et à mesure:
 - docker build -t cluster-apache-spark:3.0.2 . 
 - docker-compose up -d
 
