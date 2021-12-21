@@ -1,5 +1,3 @@
 venv
-./app/samples/campus.json
-./app/samples/students.json
-
-./app/.ipynb_checkpoints
+/services/mongo-cluster/samples/students.json
+/services/mongo-cluster/samples/campus.json

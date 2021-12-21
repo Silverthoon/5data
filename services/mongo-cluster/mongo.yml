@@ -1,20 +1,25 @@
 version: "3.6"
 services:
   mongo:
-    hostname: mongo
     image: mongo
+    ports:
+      - "27017:27017"
     restart: always
+    volumes:
+      - mongo_data:/data/db
     environment:
       MONGO_INITDB_ROOT_USERNAME: root
       MONGO_INITDB_ROOT_PASSWORD: example
-    volumes:
-      - mongo_data:/data/db
-      - ../app/samples:/samples
-      - ../app/import.sh:/seed/import.sh
     networks:
       - supinfo
-    ports:
-      - "27017:27017"
+  mongo-seed:
+    build:
+      context: .
+      dockerfile: Dockerfile
+    links:
+      - mongo
+    networks:
+      - supinfo
   mongo-express:
       image: mongo-express
       restart: always
@@ -26,8 +31,7 @@ services:
         ME_CONFIG_MONGODB_ADMINUSERNAME: root
         ME_CONFIG_MONGODB_ADMINPASSWORD: example
         ME_CONFIG_MONGODB_URL: mongodb://root:example@mongo:27017/
-      deploy:
-        replicas: 1
+
 
 volumes:
   mongo_data:
