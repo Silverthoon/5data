@@ -9,6 +9,7 @@ N'hesitez pas à suivre la procédure d'intallation de docker sur leur site offi
 **sudo apt-get install nodejs -y**
 
 Il faudra aussi installer npm avec la commande suivante: **sudo apt-get install npm**
+
 Pour la génération des données le module "Faker" est obligatoire. Pour l'ajouter exécuter: **npm i faker**
 
 ## **Géneration des données**
