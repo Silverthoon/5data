@@ -8,6 +8,8 @@ Pour la mise ne place de l'architecture et le l'exécution des divers scripts, a
 N'hesitez pas à suivre la procédure d'intallation de docker sur leur site officiel et pour installer nodejs exécutez dans votre terminal la commande suivante:
 **sudo apt-get install nodejs -y**
 
+Installez ensuite docker-compose avec la commande suivante **sudo apt install docker-compose**
+
 Il faudra aussi installer npm avec la commande suivante: **sudo apt-get install npm**
 
 Pour la génération des données le module "Faker" est obligatoire. Pour l'ajouter exécuter: **npm i faker**
