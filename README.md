@@ -2,6 +2,12 @@
 
 # Documentation Technique 5DATA
 
+## **Prérequis**
+
+Pour la mise ne place de l'architecture et le l'exécution des divers scripts, assurez-vous d'avoir une version à jour de docker ainsi que de nodejs.
+N'hesitez pas à suivre la procédure d'intallation de docker sur leur site officiel et pour installer nodejs exécutez dans votre terminal la commande suivante:
+sudo apt-get install nodejs -y
+
 ## **Géneration des données**
 
 Vous pouvez génerez les données à partir du script se trouvant dans le chemin suivant /data/data.js
