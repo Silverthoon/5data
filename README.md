@@ -2,6 +2,12 @@
 
 # Documentation Technique 5DATA
 
+## Avant de lire ce document technique, veuillez lire attentivement les documents suivants
+
+- Projet_de_5DATA.pdf
+- Manifest_projet.ipynb
+
+
 ## **Prérequis**
 
 Pour la mise ne place de l'architecture et le l'exécution des divers scripts, assurez-vous d'avoir une version à jour de docker ainsi que de nodejs.
