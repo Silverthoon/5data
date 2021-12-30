@@ -21,6 +21,10 @@ Une fois les deux fichiers json générés, veuillez les déplacez dans le dossi
 
 ## **Deploiement des services**
 
+Tout d'abord initier un docker swarm avec votre machine en tant que Master avec la commande suivante:
+
+**docker swarm init --advertise-addr 127.0.0.1**
+
 Créer un réseau bridge  avec pour nom **supinfo**, et un autre réseau en overlay appelé **5data-overlay**
 	
 - docker network create supinfo --driver bridge 
